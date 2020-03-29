@@ -10,18 +10,49 @@
   },
   "clues": {
     "clue-0001": {
-      "key": "0001",
       "number": 1,
       "description": "1. Where hands go in the Time Warp dance",
       "location": { "x": 0, "y": 0 },
       "direction": "ACROSS",
       "answer": "HIPS",
       "guess": ""
+    },
+    "clue-0002": {
+      "number": 2,
+      "description": "1. Where hands go in the Time Warp dance",
+      "location": { "x": 4, "y": 4 },
+      "direction": "ACROSS",
+      "answer": "HIPS",
+      "guess": ""
+    },
+    "clue-0003": {
+      "number": 3,
+      "description": "1. Where hands go in the Time Warp dance",
+      "location": { "x": 2, "y": 1 },
+      "direction": "ACROSS",
+      "answer": "HIPS",
+      "guess": ""
+    },
+    "clue-0004": {
+      "number": 4,
+      "description": "1. Where hands go in the Time Warp dance",
+      "location": { "x": 12, "y": 12 },
+      "direction": "DOWN",
+      "answer": "HIPS",
+      "guess": ""
+    },
+    "clue-0005": {
+      "number": 5,
+      "description": "1. Where hands go in the Time Warp dance",
+      "location": { "x": 0, "y": 0 },
+      "direction": "DOWN",
+      "answer": "HIPS",
+      "guess": ""
     }
   },
 
   "size": {
-    "rows": 4,
-    "columns": 4
+    "rows": 16,
+    "columns": 16
   }
 }
