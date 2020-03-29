@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "author": "Robyn Weintraub",
+    "copyright": "2019, The New York Times",
+    "date": "12/28/2019",
+    "dow": "Saturday",
+    "editor": "Will Shortz",
+    "publisher": "The New York Times",
+    "title": "NY Times, Sat, Dec 28, 2019"
+  },
+  "clues": {
+    "clue-0001": {
+      "key": "0001",
+      "number": 1,
+      "description": "1. Where hands go in the Time Warp dance",
+      "location": { "x": 0, "y": 0 },
+      "direction": "ACROSS",
+      "answer": "HIPS",
+      "guess": ""
+    }
+  },
+
+  "size": {
+    "rows": 4,
+    "columns": 4
+  }
+}
