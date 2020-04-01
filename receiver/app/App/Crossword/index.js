@@ -5,15 +5,18 @@ import Cell from "../Cell";
 
 export default ({ grid, gridSize }) => (
   <div
+    id="crossword-grid"
     style={{
       background: "black",
-      padding: "5px",
-      width: "100vh",
-      height: "100vh",
       display: "grid",
-      gridTemplateColumns: `repeat(${gridSize}, 1fr)`,
+      flexGrow: 1,
+      gridAutoRows: "1fr",
       gridGap: "3px",
-      gridAutoRows: "1fr"
+      gridTemplateColumns: `repeat(${gridSize}, 1fr)`,
+      height: "calc(100vh - 130px)",
+      margin: "0 auto",
+      padding: "5px",
+      width: "calc(100vh - 130px)"
     }}
   >
     {grid.map(cell => (

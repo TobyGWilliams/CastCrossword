@@ -10,29 +10,60 @@ import convertToGrid from "../util/convert-to-grid";
 import { centerText, flexAlignCenter, zeroMarginBottom } from "../styles";
 import Crossword from "../Crossword";
 
+const CHANNEL_CROSSWORD = "urn:x-cast:crossword";
+const CHANNEL_CLUE = "urn:x-cast:clue";
+
 const App = () => {
   const [puzzle, setPuzzle] = useState();
   const [selectedClue, setSelectedClue] = useState("");
-  const [showClues, setShowClues] = useState(false);
-
-  console.log(puzzle && convertToGrid(puzzle));
 
   const onPuzzleLoad = () => {
-    setPuzzle(rawPuzzle);
+    updatePuzzle(rawPuzzle);
   };
 
   const onClueClick = clue => () => {
+    sendClue(clue);
     setSelectedClue(clue);
   };
 
   const onClueChange = clue => value => {
-    setPuzzle({
+    const newPuzzle = {
       ...puzzle,
       clues: {
         ...puzzle.clues,
         [clue.key]: { ...puzzle.clues[clue.key], guess: value }
       }
-    });
+    };
+    updatePuzzle(newPuzzle);
+  };
+
+  const updatePuzzle = newPuzzle => {
+    const toBePuzzle = {
+      ...newPuzzle,
+      cells: convertToGrid(newPuzzle)
+    };
+    setPuzzle(toBePuzzle);
+    sendPuzzle(toBePuzzle);
+  };
+
+  const sendPuzzle = puzzle =>
+    sendMessage(CHANNEL_CROSSWORD, JSON.stringify({ puzzle }));
+
+  const sendClue = clue =>
+    sendMessage(CHANNEL_CLUE, JSON.stringify({ clue: clue.description }));
+
+  const sendMessage = (channel, message) => {
+    const context = cast.framework.CastContext.getInstance();
+    const session = context.getCurrentSession();
+
+    session
+      .sendMessage(channel, message)
+      .then(() => {
+        console.info("message sent", channel);
+      })
+      .catch(err => {
+        console.error("unable to send message", channel, err);
+      });
   };
 
   const clueMessage = (
@@ -40,6 +71,7 @@ const App = () => {
       selectedClue.description
     )}`}</p>
   );
+
   const selectClueMessage = (
     <p style={centerText}>
       Click the
@@ -59,7 +91,6 @@ const App = () => {
         }}
       >
         <h1 style={{ ...centerText, margin: 0 }}>ClueCrossword</h1>
-
         {puzzle && <div>{selectedClue ? clueMessage : selectClueMessage}</div>}
         {!puzzle && (
           <Fragment>
@@ -75,10 +106,7 @@ const App = () => {
 
       {puzzle && (
         <Fragment>
-          <Crossword
-            grid={convertToGrid(puzzle)}
-            gridSize={puzzle.size.columns}
-          />
+          <Crossword grid={puzzle.cells} gridSize={puzzle.size.columns} />
           <div>{selectedClue ? clueMessage : selectClueMessage}</div>
           <Clues
             clues={puzzle.clues}
@@ -92,20 +120,3 @@ const App = () => {
 };
 
 export default App;
-
-// const buttonClick = () => {
-//   const CHANNEL_CROSSWORD = "urn:x-cast:crossword";
-//   const CHANNEL_CLUE = "urn:x-cast:clue";
-
-//   const context = cast.framework.CastContext.getInstance();
-//   const session = context.getCurrentSession();
-
-//   session
-//     .sendMessage(CHANNEL_CLUE, JSON.stringify({ message: selectedClue }))
-//     .then(() => {
-//       console.log("message sent");
-//     })
-//     .catch(err => {
-//       console.error("unable to send message", err);
-//     });
-// };
