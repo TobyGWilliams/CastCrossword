@@ -1,8 +1,6 @@
 import React from "react";
 import Cell from "../Cell";
 
-
-
 export default ({ grid, gridSize }) => (
   <div
     id="crossword-grid"
