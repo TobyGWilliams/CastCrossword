@@ -26,7 +26,7 @@ export default ({ gridSize, filled, number, letter }) => {
         <div
         style={{
           textAlign: "center",
-          fontSize: `calc(100vh/(${gridSize*1.3}))`,
+          fontSize: `calc(100vh/(${gridSize*1.6}))`,
           lineHeight: "1.25",
           textTransform: "capitalize"
         }}
