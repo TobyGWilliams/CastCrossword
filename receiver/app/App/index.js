@@ -15,7 +15,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      crossword: null,
+      puzzle: null,
       clue: null
     };
   }
@@ -26,37 +26,33 @@ class App extends React.Component {
     const context = cast.framework.CastReceiverContext.getInstance();
 
     context.addCustomMessageListener(CHANNEL_CLUE, ({ data }) => {
-      const { message } = data;
-      this.setState({ clue: message });
+      console.log(JSON.stringify(data));
+      const { clue } = data;
+      this.setState({ clue });
     });
 
     context.addCustomMessageListener(CHANNEL_CROSSWORD, ({ data }) => {
-      this.setState({ crossword: "hello" });
+      console.log(JSON.stringify(data));
+      const { puzzle } = data;
+      this.setState({ puzzle });
     });
 
     context.start();
   }
 
   render() {
-    const { crossword, clue } = this.state;
+    const { puzzle, clue } = this.state;
     return (
       <div>
         <h1 style={{ color: "white", textAlign: "center" }}>CastCrossword</h1>
         {clue && (
           <h2 style={{ color: "white", textAlign: "center" }}>{clue}</h2>
         )}
+        {puzzle && (
+         <Crossword grid={puzzle.cells} gridSize={puzzle.size.columns} />
+        )}
       </div>
     );
-    // <div
-    //   style={{
-    //     display: "flex",
-    //     width: "100vw",
-    //     height: "100vh"
-    //   }}
-    // >
-    //   <Crossword grid={grid} gridSize={gridSize} />
-    //   <Clues clues={clues} />
-    // </div>
   }
 }
 

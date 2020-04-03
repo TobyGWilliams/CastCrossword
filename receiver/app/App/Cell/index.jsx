@@ -24,11 +24,12 @@ export default ({ gridSize, filled, number, letter }) => {
       )}
       {letter && (
         <div
-          style={{
-            textAlign: "center",
-            fontSize: `calc(100vh/(${gridSize}*1.4))`,
-            lineHeight: "1.25"
-          }}
+        style={{
+          textAlign: "center",
+          fontSize: `calc(100vh/(${gridSize*1.6}))`,
+          lineHeight: "1.25",
+          textTransform: "capitalize"
+        }}
         >
           {letter}
         </div>

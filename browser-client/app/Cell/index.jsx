@@ -3,8 +3,6 @@ import React from "react";
 export default ({ gridSize, filled, number, letter }) => {
   if (!filled) return <div />;
 
-  console.log(letter);
-
   return (
     <div
       style={{
@@ -15,9 +13,9 @@ export default ({ gridSize, filled, number, letter }) => {
       {number && (
         <div
           style={{
-            margin: `calc(100vh/(${gridSize}*30))`,
+            margin: `calc(100vh/(${gridSize*30}))`,
             lineHeight: "1",
-            fontSize: `calc(100vh/(${gridSize}*6))`,
+            fontSize: `calc(100vh/(${gridSize*6}))`,
             position: "absolute"
           }}
         >
@@ -28,7 +26,7 @@ export default ({ gridSize, filled, number, letter }) => {
         <div
           style={{
             textAlign: "center",
-            fontSize: `calc(100vh/(${gridSize}*1.4))`,
+            fontSize: `calc(100vh/(${gridSize*1.6}))`,
             lineHeight: "1.25",
             textTransform: "capitalize"
           }}
