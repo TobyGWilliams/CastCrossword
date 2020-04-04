@@ -1,0 +1,566 @@
+{
+  "meta": {},
+  "clues": [
+    {
+      "answer": "HIPS",
+      "description": "1. Where hands go in the Time Warp dance",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 1,
+      "location": { "x": 0, "y": 0 }
+    },
+    {
+      "answer": "TSPS",
+      "description": "5. Baker&#39;s units: Abbr.",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 5,
+      "location": { "x": 5, "y": 0 }
+    },
+    {
+      "answer": "ILIAD",
+      "description": "9. Bronze Age chronicle",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 9,
+      "location": { "x": 10, "y": 0 }
+    },
+    {
+      "answer": "OCHO",
+      "description": "14. Number of sides on a PARE road sign",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 14,
+      "location": { "x": 0, "y": 1 }
+    },
+    {
+      "answer": "SPAS",
+      "description": "15. Springs for vacation trips",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 15,
+      "location": { "x": 5, "y": 1 }
+    },
+    {
+      "answer": "COMMA",
+      "description": "16. Character in &quot;Monsters, Inc.&quot;",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 16,
+      "location": { "x": 10, "y": 1 }
+    },
+    {
+      "answer": "LAOS",
+      "description": "17. Myanmar neighbor",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 17,
+      "location": { "x": 0, "y": 2 }
+    },
+    {
+      "answer": "HITTHESPOT",
+      "description": "18. Was completely satisfying",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 18,
+      "location": { "x": 5, "y": 2 }
+    },
+    {
+      "answer": "ONNOTICE",
+      "description": "20. Forewarned",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 20,
+      "location": { "x": 0, "y": 3 }
+    },
+    {
+      "answer": "ODESSA",
+      "description": "22. Former Soviet naval base",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 22,
+      "location": { "x": 9, "y": 3 }
+    },
+    {
+      "answer": "GRE",
+      "description": "23. Letters that often precede a Ph.D.",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 23,
+      "location": { "x": 0, "y": 4 }
+    },
+    {
+      "answer": "WRY",
+      "description": "24. Like some humor",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 24,
+      "location": { "x": 4, "y": 4 }
+    },
+    {
+      "answer": "JOTS",
+      "description": "25. Tiny amounts",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 25,
+      "location": { "x": 8, "y": 4 }
+    },
+    {
+      "answer": "REDHOT",
+      "description": "26. More than just in",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 26,
+      "location": { "x": 0, "y": 5 }
+    },
+    {
+      "answer": "MAKESDO",
+      "description": "28. Finds a way",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 28,
+      "location": { "x": 7, "y": 5 }
+    },
+    {
+      "answer": "ALIAS",
+      "description": "31. Doe, perhaps",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 31,
+      "location": { "x": 0, "y": 6 }
+    },
+    {
+      "answer": "CAMEALONG",
+      "description": "32. Went too",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 32,
+      "location": { "x": 6, "y": 6 }
+    },
+    {
+      "answer": "MATS",
+      "description": "34. Some framing supplies",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 34,
+      "location": { "x": 0, "y": 7 }
+    },
+    {
+      "answer": "CORED",
+      "description": "35. Like some fruits and ice sheets",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 35,
+      "location": { "x": 5, "y": 7 }
+    },
+    {
+      "answer": "ETTU",
+      "description": "36. Censure of a senator",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 36,
+      "location": { "x": 11, "y": 7 }
+    },
+    {
+      "answer": "STINGRAYS",
+      "description": "37. Old sports cars named for a fish",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 37,
+      "location": { "x": 0, "y": 8 }
+    },
+    {
+      "answer": "LETHE",
+      "description": "39. One of the five rivers of 56-Across",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 39,
+      "location": { "x": 10, "y": 8 }
+    },
+    {
+      "answer": "ENTAILS",
+      "description": "40. Involves",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 40,
+      "location": { "x": 1, "y": 9 }
+    },
+    {
+      "answer": "RUPEES",
+      "description": "41. They can get you into the Taj Mahal",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 41,
+      "location": { "x": 9, "y": 9 }
+    },
+    {
+      "answer": "ALMS",
+      "description": "42. Form of relief",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 42,
+      "location": { "x": 3, "y": 10 }
+    },
+    {
+      "answer": "BUS",
+      "description": "43. Coach",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 43,
+      "location": { "x": 8, "y": 10 }
+    },
+    {
+      "answer": "DRS",
+      "description": "44. Vets, e.g.: Abbr.",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 44,
+      "location": { "x": 12, "y": 10 }
+    },
+    {
+      "answer": "ORACLE",
+      "description": "45. User of the &quot;I Ching&quot;",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 45,
+      "location": { "x": 0, "y": 11 }
+    },
+    {
+      "answer": "CASHFLOW",
+      "description": "48. Liquidity concern",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 48,
+      "location": { "x": 7, "y": 11 }
+    },
+    {
+      "answer": "TOPLOADERS",
+      "description": "50. Less efficient washers",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 50,
+      "location": { "x": 0, "y": 12 }
+    },
+    {
+      "answer": "RICH",
+      "description": "52. Like triple fudge brownies",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 52,
+      "location": { "x": 11, "y": 12 }
+    },
+    {
+      "answer": "ONEUP",
+      "description": "53. Outdo",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 53,
+      "location": { "x": 0, "y": 13 }
+    },
+    {
+      "answer": "NONE",
+      "description": "54. Last word in the first verse of &quot;Old Mother Hubbard&quot;",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 54,
+      "location": { "x": 6, "y": 13 }
+    },
+    {
+      "answer": "ANKA",
+      "description": "55. &quot;Put Your Head on My Shoulder&quot; singer, 1959",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 55,
+      "location": { "x": 11, "y": 13 }
+    },
+    {
+      "answer": "HADES",
+      "description": "56. See 39-Across",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 56,
+      "location": { "x": 0, "y": 14 }
+    },
+    {
+      "answer": "ASST",
+      "description": "57. Help in a small way?",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 57,
+      "location": { "x": 6, "y": 14 }
+    },
+    {
+      "answer": "TEST",
+      "description": "58. Try",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 58,
+      "location": { "x": 11, "y": 14 }
+    },
+    {
+      "answer": "HOLOGRAMS",
+      "description": "1. Things seen that aren&#39;t there",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 1,
+      "location": { "x": 0, "y": 0 }
+    },
+    {
+      "answer": "ICANRELATE",
+      "description": "2. &quot;You and me both&quot;",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 2,
+      "location": { "x": 1, "y": 0 }
+    },
+    {
+      "answer": "PHONEDITIN",
+      "description": "3. Gave much less than 100%",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 3,
+      "location": { "x": 2, "y": 0 }
+    },
+    {
+      "answer": "SOSO",
+      "description": "4. Nothing to write home about",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 4,
+      "location": { "x": 3, "y": 0 }
+    },
+    {
+      "answer": "TSHIRT",
+      "description": "5. No-no at a fancy restaurant",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 5,
+      "location": { "x": 5, "y": 0 }
+    },
+    {
+      "answer": "SPICY",
+      "description": "6. Menu caution",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 6,
+      "location": { "x": 6, "y": 0 }
+    },
+    {
+      "answer": "PATE",
+      "description": "7. Fancy spread",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 7,
+      "location": { "x": 7, "y": 0 }
+    },
+    {
+      "answer": "SST",
+      "description": "8. Historic barrier breaker, for short",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 8,
+      "location": { "x": 8, "y": 0 }
+    },
+    {
+      "answer": "ICEDTEA",
+      "description": "9. Ingredient in a John Daly cocktail",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 9,
+      "location": { "x": 10, "y": 0 }
+    },
+    {
+      "answer": "LOSESSLEEP",
+      "description": "10. Worries around the clock, perhaps",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 10,
+      "location": { "x": 11, "y": 0 }
+    },
+    {
+      "answer": "IMPS",
+      "description": "11. Bratlings",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 11,
+      "location": { "x": 12, "y": 0 }
+    },
+    {
+      "answer": "AMOS",
+      "description": "12. Baking entrepreneur Wally",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 12,
+      "location": { "x": 13, "y": 0 }
+    },
+    {
+      "answer": "DATA",
+      "description": "13. ___ plan",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 13,
+      "location": { "x": 14, "y": 0 }
+    },
+    {
+      "answer": "HOOKED",
+      "description": "19. Like a binge watcher, say",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 19,
+      "location": { "x": 9, "y": 2 }
+    },
+    {
+      "answer": "TWOS",
+      "description": "21. Uncommon notes",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 21,
+      "location": { "x": 4, "y": 3 }
+    },
+    {
+      "answer": "JAMES",
+      "description": "25. Roald Dahl title character",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 25,
+      "location": { "x": 8, "y": 4 }
+    },
+    {
+      "answer": "HASNTACLUE",
+      "description": "27. Is thick",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 27,
+      "location": { "x": 3, "y": 5 }
+    },
+    {
+      "answer": "MARYS",
+      "description": "28. St. ___ College (school name in Indiana, Maryland and California)",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 28,
+      "location": { "x": 7, "y": 5 }
+    },
+    {
+      "answer": "DOTTEDLINE",
+      "description": "29. Incomplete part of a contract",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 29,
+      "location": { "x": 12, "y": 5 }
+    },
+    {
+      "answer": "ONTHEROCKS",
+      "description": "30. Not neat",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 30,
+      "location": { "x": 13, "y": 5 }
+    },
+    {
+      "answer": "COALS",
+      "description": "32. Fill for a grill",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 32,
+      "location": { "x": 6, "y": 6 }
+    },
+    {
+      "answer": "GUESSWHAT",
+      "description": "33. Juicy news alert",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 33,
+      "location": { "x": 14, "y": 6 }
+    },
+    {
+      "answer": "CRIMEA",
+      "description": "35. Annexed land of 2014",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 35,
+      "location": { "x": 5, "y": 7 }
+    },
+    {
+      "answer": "GALLOPS",
+      "description": "38. Speeds through the Downs, say",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 38,
+      "location": { "x": 4, "y": 8 }
+    },
+    {
+      "answer": "LUSH",
+      "description": "39. Verdant",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 39,
+      "location": { "x": 10, "y": 8 }
+    },
+    {
+      "answer": "RUSSET",
+      "description": "41. Autumn shade",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 41,
+      "location": { "x": 9, "y": 9 }
+    },
+    {
+      "answer": "BARNS",
+      "description": "43. They&#39;re raised on farms",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 43,
+      "location": { "x": 8, "y": 10 }
+    },
+    {
+      "answer": "OTOH",
+      "description": "45. Texting alternative?",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 45,
+      "location": { "x": 0, "y": 11 }
+    },
+    {
+      "answer": "RONA",
+      "description": "46. Woman&#39;s name that becomes another woman&#39;s name if you switch the first and third letters",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 46,
+      "location": { "x": 1, "y": 11 }
+    },
+    {
+      "answer": "APED",
+      "description": "47. Mirrored",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 47,
+      "location": { "x": 2, "y": 11 }
+    },
+    {
+      "answer": "CEOS",
+      "description": "48. Firm leaders, for short",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 48,
+      "location": { "x": 7, "y": 11 }
+    },
+    {
+      "answer": "FRAT",
+      "description": "49. Rush home?",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 49,
+      "location": { "x": 11, "y": 11 }
+    },
+    {
+      "answer": "DNA",
+      "description": "51. Body builder?",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 51,
+      "location": { "x": 6, "y": 12 }
+    }
+  ],
+  "size": { "columns": 15, "rows": 15 }
+}

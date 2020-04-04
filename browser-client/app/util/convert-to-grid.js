@@ -5,13 +5,14 @@ const isLocationMatchIndex = (i, size) => ({ location }) =>
   location.x === i % size && location.y === Math.floor(i / size);
 
 export const getCellsFromClue = clue => {
-  const { answer, direction, location, number, guess } = clue;
+  const { answer, direction, location, number, guess, selected } = clue;
   const noOfCells = answer.length;
   const cells = [];
 
   for (let i = 0; i < noOfCells; i += 1) {
     cells.push({
       ...(guess && { letter: guess[i] }),
+      ...(selected && { selected: true }),
       ...(i === 0 && { number }),
       location: {
         x: direction === ACROSS ? location.x + i : location.x,

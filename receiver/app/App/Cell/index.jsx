@@ -1,12 +1,12 @@
 import React from "react";
 
-export default ({ gridSize, filled, number, letter }) => {
+export default ({ gridSize, filled, number, letter, selected }) => {
   if (!filled) return <div />;
 
   return (
     <div
       style={{
-        background: "white",
+        background: selected ? "aquamarine" : "white",
         position: "relative"
       }}
     >
@@ -24,12 +24,12 @@ export default ({ gridSize, filled, number, letter }) => {
       )}
       {letter && (
         <div
-        style={{
-          textAlign: "center",
-          fontSize: `calc(100vh/(${gridSize*1.6}))`,
-          lineHeight: "1.25",
-          textTransform: "capitalize"
-        }}
+          style={{
+            textAlign: "center",
+            fontSize: `calc(100vh/(${gridSize * 1.6}))`,
+            lineHeight: "1.25",
+            textTransform: "capitalize"
+          }}
         >
           {letter}
         </div>

@@ -1,21 +1,21 @@
 import React from "react";
 
-export default ({ gridSize, filled, number, letter }) => {
+export default ({ gridSize, filled, number, letter, selected }) => {
   if (!filled) return <div />;
 
   return (
     <div
       style={{
-        background: "white",
+        background: selected ? "aquamarine" : "white",
         position: "relative"
       }}
     >
       {number && (
         <div
           style={{
-            margin: `calc(100vh/(${gridSize*30}))`,
+            margin: `calc(100vh/(${gridSize * 30}))`,
             lineHeight: "1",
-            fontSize: `calc(100vh/(${gridSize*6}))`,
+            fontSize: `calc(100vh/(${gridSize * 6}))`,
             position: "absolute"
           }}
         >
@@ -26,7 +26,7 @@ export default ({ gridSize, filled, number, letter }) => {
         <div
           style={{
             textAlign: "center",
-            fontSize: `calc(100vh/(${gridSize*1.6}))`,
+            fontSize: `calc(100vh/(${gridSize * 1.6}))`,
             lineHeight: "1.25",
             textTransform: "capitalize"
           }}

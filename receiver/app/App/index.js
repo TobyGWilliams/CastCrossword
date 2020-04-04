@@ -1,8 +1,6 @@
 import React from "react";
 
 import Crossword from "./Crossword";
-import Clues from "./Clues";
-
 // https://github.com/doshea/nyt_crosswords
 // import nyPuzzle from "./ny-puzzle-converter";
 
@@ -21,8 +19,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
-
     const context = cast.framework.CastReceiverContext.getInstance();
 
     context.addCustomMessageListener(CHANNEL_CLUE, ({ data }) => {

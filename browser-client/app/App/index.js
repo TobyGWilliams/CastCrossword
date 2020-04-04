@@ -4,7 +4,7 @@ import AddToQueue from "@material-ui/icons/AddToQueue";
 
 import Clues from "../Clues";
 import htmlDecode from "../util/html-decode";
-import rawPuzzle from "../puzzles/ny-times-2019-12-28.json";
+import rawPuzzle from "../puzzles/hello-world.json";
 import convertToGrid from "../util/convert-to-grid";
 
 import { centerText, flexAlignCenter, zeroMarginBottom } from "../styles";
@@ -22,8 +22,25 @@ const App = () => {
   };
 
   const onClueClick = clue => () => {
-    sendClue(clue);
+    // send to the chromecast
+    try {
+      sendClue(clue);
+    } catch (err) {
+      console.error("unable to send message");
+    }
+    // set the clue as selected in the UI
     setSelectedClue(clue);
+    // update the puzzle so that the cells are highlighted
+
+    const newClues = Object.entries(puzzle.clues).map(([key, value]) => [
+      key,
+      { ...value, selected: key === clue.key }
+    ]);
+
+    updatePuzzle({
+      ...puzzle,
+      clues: Object.fromEntries(newClues)
+    });
   };
 
   const onClueChange = clue => value => {
@@ -46,11 +63,23 @@ const App = () => {
     sendPuzzle(toBePuzzle);
   };
 
-  const sendPuzzle = puzzle =>
+  const sendPuzzle = puzzle => {
+    console.log(puzzle);
     sendMessage(CHANNEL_CROSSWORD, JSON.stringify({ puzzle }));
+  };
 
-  const sendClue = clue =>
-    sendMessage(CHANNEL_CLUE, JSON.stringify({ clue: clue.description }));
+  const sendClue = ({ direction, description, answer }) => {
+    const clue = `${direction === "ACROSS" ? "Across" : "Down"}: ${htmlDecode(
+      description
+    )} (${answer.length})`;
+
+    sendMessage(
+      CHANNEL_CLUE,
+      JSON.stringify({
+        clue
+      })
+    );
+  };
 
   const sendMessage = (channel, message) => {
     const context = cast.framework.CastContext.getInstance();
@@ -90,7 +119,9 @@ const App = () => {
           height: "120px"
         }}
       >
-        <h1 style={{ ...centerText, margin: 0 }}>ClueCrossword</h1>
+        <h1 style={{ ...centerText, margin: 0 }}>
+          Hello World
+        </h1>
         {puzzle && <div>{selectedClue ? clueMessage : selectClueMessage}</div>}
         {!puzzle && (
           <Fragment>

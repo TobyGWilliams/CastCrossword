@@ -17,6 +17,7 @@
       };
 
       window["__onGCastApiAvailable"] = function(isAvailable) {
+        console.log(this, isAvailable);
         if (isAvailable) {
           initializeCastApi();
         }
