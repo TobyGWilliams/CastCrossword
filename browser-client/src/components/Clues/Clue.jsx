@@ -3,8 +3,8 @@ import React, { Fragment } from "react";
 import { IconButton, TextField } from "@material-ui/core";
 import AddToQueue from "@material-ui/icons/AddToQueue";
 
-import htmlDecode from "../util/html-decode";
-import { verticalAlignCenter } from "../styles";
+import htmlDecode from "../../util/html-decode";
+import { verticalAlignCenter } from "../../styles";
 
 export default ({ clue, onClick, onChange }) => {
   return (

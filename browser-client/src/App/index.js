@@ -2,13 +2,14 @@ import React, { useState, Fragment } from "react";
 import { Button } from "@material-ui/core";
 import AddToQueue from "@material-ui/icons/AddToQueue";
 
-import Clues from "../Clues";
+import Clues from "../components/Clues";
+import Crossword from "../components/Crossword";
+
 import htmlDecode from "../util/html-decode";
 import rawPuzzle from "../puzzles/hello-world.json";
 import convertToGrid from "../util/convert-to-grid";
 
-import { centerText, flexAlignCenter, zeroMarginBottom } from "../styles";
-import Crossword from "../Crossword";
+import { centerText, flexAlignCenter } from "../styles";
 
 const CHANNEL_CROSSWORD = "urn:x-cast:crossword";
 const CHANNEL_CLUE = "urn:x-cast:clue";
@@ -21,7 +22,7 @@ const App = () => {
     updatePuzzle(rawPuzzle);
   };
 
-  const onClueClick = clue => () => {
+  const onClueClick = (clue) => () => {
     // send to the chromecast
     try {
       sendClue(clue);
@@ -34,37 +35,36 @@ const App = () => {
 
     const newClues = Object.entries(puzzle.clues).map(([key, value]) => [
       key,
-      { ...value, selected: key === clue.key }
+      { ...value, selected: key === clue.key },
     ]);
 
     updatePuzzle({
       ...puzzle,
-      clues: Object.fromEntries(newClues)
+      clues: Object.fromEntries(newClues),
     });
   };
 
-  const onClueChange = clue => value => {
+  const onClueChange = (clue) => (value) => {
     const newPuzzle = {
       ...puzzle,
       clues: {
         ...puzzle.clues,
-        [clue.key]: { ...puzzle.clues[clue.key], guess: value }
-      }
+        [clue.key]: { ...puzzle.clues[clue.key], guess: value },
+      },
     };
     updatePuzzle(newPuzzle);
   };
 
-  const updatePuzzle = newPuzzle => {
+  const updatePuzzle = (newPuzzle) => {
     const toBePuzzle = {
       ...newPuzzle,
-      cells: convertToGrid(newPuzzle)
+      cells: convertToGrid(newPuzzle),
     };
     setPuzzle(toBePuzzle);
     sendPuzzle(toBePuzzle);
   };
 
-  const sendPuzzle = puzzle => {
-    console.log(puzzle);
+  const sendPuzzle = (puzzle) => {
     sendMessage(CHANNEL_CROSSWORD, JSON.stringify({ puzzle }));
   };
 
@@ -76,21 +76,20 @@ const App = () => {
     sendMessage(
       CHANNEL_CLUE,
       JSON.stringify({
-        clue
+        clue,
       })
     );
   };
 
   const sendMessage = (channel, message) => {
-    const context = cast.framework.CastContext.getInstance();
+    const context = window.cast.framework.CastContext.getInstance();
     const session = context.getCurrentSession();
-
     session
       .sendMessage(channel, message)
       .then(() => {
         console.info("message sent", channel);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("unable to send message", channel, err);
       });
   };
@@ -116,12 +115,9 @@ const App = () => {
       <div
         style={{
           padding: "10px",
-          height: "120px"
         }}
       >
-        <h1 style={{ ...centerText, margin: 0 }}>
-          Hello World
-        </h1>
+        <h1 style={{ ...centerText, margin: 0 }}>CastCrossword</h1>
         {puzzle && <div>{selectedClue ? clueMessage : selectClueMessage}</div>}
         {!puzzle && (
           <Fragment>
