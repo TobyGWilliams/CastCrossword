@@ -1,22 +1,36 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { Button } from "@material-ui/core";
 import AddToQueue from "@material-ui/icons/AddToQueue";
 
 import Clues from "../components/Clues";
 import Crossword from "../components/Crossword";
+import Splash from "../components/Splash";
 
 import htmlDecode from "../util/html-decode";
-import rawPuzzle from "../puzzles/hello-world.json";
 import convertToGrid from "../util/convert-to-grid";
+import rawPuzzle from "../puzzles/hello-world.json";
 
 import { centerText, flexAlignCenter } from "../styles";
 
 const CHANNEL_CROSSWORD = "urn:x-cast:crossword";
 const CHANNEL_CLUE = "urn:x-cast:clue";
 
-const App = () => {
+const App = ({ connection }) => {
+  const [showSplash, setShowSplash] = useState(true);
   const [puzzle, setPuzzle] = useState();
   const [selectedClue, setSelectedClue] = useState("");
+
+  // useEffect(() => {
+  //   if (connection && puzzle) {
+  //     setShowSplash(false);
+  //   }
+  // }, [connection]);
+
+  // useEffect(() => {
+  //   if (connection && puzzle) {
+  //     setShowSplash(false);
+  //   }
+  // }, [puzzle]);
 
   const onPuzzleLoad = () => {
     updatePuzzle(rawPuzzle);
@@ -109,6 +123,16 @@ const App = () => {
       icon to select a clue for everybody to work on
     </p>
   );
+
+  if (showSplash) {
+    return (
+      <Splash
+        onSelectPuzzle={onPuzzleLoad}
+        isPuzzle={!!puzzle}
+        isConnection={!!connection}
+      />
+    );
+  }
 
   return (
     <Fragment>
