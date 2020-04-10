@@ -13,9 +13,9 @@ export default ({ gridSize, filled, number, letter, selected }) => {
       {number && (
         <div
           style={{
-            margin: `calc(100vh/(${gridSize}*30))`,
+            margin: `calc(100vh/(${gridSize * 30}))`,
             lineHeight: "1",
-            fontSize: `calc(100vh/(${gridSize}*6))`,
+            fontSize: `calc(100vh/(${gridSize * 6}))`,
             position: "absolute"
           }}
         >
