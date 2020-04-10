@@ -13,10 +13,10 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "PORT=4000 REACT_APP_CAST_APPLICATION_ID=99A4FD66 react-scripts start",
+    "build": "REACT_APP_CAST_APPLICATION_ID=865DA20B react-scripts build",
+    "test": "REACT_APP_CAST_APPLICATION_ID=865DA20B react-scripts test",
+    "eject": "REACT_APP_CAST_APPLICATION_ID=865DA20B react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
