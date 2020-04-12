@@ -1,7 +1,7 @@
 import React from "react";
 import WrappedApplication from ".";
 
-const APPLICATION_ID = "865DA20B";
+const APPLICATION_ID = process.env.REACT_APP_CAST_APPLICATION_ID;
 
 export default class App extends React.Component {
   constructor(props) {

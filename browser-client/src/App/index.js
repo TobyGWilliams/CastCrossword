@@ -8,7 +8,7 @@ import Splash from "../components/Splash";
 
 import htmlDecode from "../util/html-decode";
 import convertToGrid from "../util/convert-to-grid";
-import rawPuzzle from "../puzzles/hello-world.json";
+import rawPuzzle from "../puzzles/ny-times-2019-12-28.json";
 
 import { centerText, flexAlignCenter } from "../styles";
 
