@@ -15,7 +15,7 @@ import { centerText, flexAlignCenter } from "../styles";
 const CHANNEL_CROSSWORD = "urn:x-cast:crossword";
 const CHANNEL_CLUE = "urn:x-cast:clue";
 
-const App = ({ connection }) => {
+const App = ({ connection, googleCastButton }) => {
   const [showSplash, setShowSplash] = useState(true);
   const [puzzle, setPuzzle] = useState();
   const [selectedClue, setSelectedClue] = useState("");
@@ -130,6 +130,7 @@ const App = ({ connection }) => {
         onSelectPuzzle={onPuzzleLoad}
         isPuzzle={!!puzzle}
         isConnection={!!connection}
+        googleCastButton={googleCastButton}
       />
     );
   }

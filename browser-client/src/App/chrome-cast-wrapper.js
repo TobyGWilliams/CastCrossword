@@ -19,28 +19,33 @@ export default class App extends React.Component {
   componentDidMount() {
     const initializeCastApi = () => {
       const { cast, chrome } = window;
-      const context = cast.framework.CastContext.getInstance();
 
-      context.setOptions({
-        receiverApplicationId: APPLICATION_ID,
-        autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
-      });
+      try {
+        const context = cast.framework.CastContext.getInstance();
 
-      context.addEventListener(
-        cast.framework.CastContextEventType.SESSION_STATE_CHANGED,
-        (event) => {
-          switch (event.sessionState) {
-            case cast.framework.SessionState.SESSION_STARTED:
-              this.setConnection("CONNECTED");
-              break;
-            case cast.framework.SessionState.SESSION_ENDED:
-              this.setConnection(null);
-              break;
-            default:
-              break;
+        context.setOptions({
+          receiverApplicationId: APPLICATION_ID,
+          autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
+        });
+
+        context.addEventListener(
+          cast.framework.CastContextEventType.SESSION_STATE_CHANGED,
+          (event) => {
+            switch (event.sessionState) {
+              case cast.framework.SessionState.SESSION_STARTED:
+                this.setConnection("CONNECTED");
+                break;
+              case cast.framework.SessionState.SESSION_ENDED:
+                this.setConnection(null);
+                break;
+              default:
+                break;
+            }
           }
-        }
-      );
+        );
+      } catch (err) {
+        console.err(err);
+      }
     };
 
     window["__onGCastApiAvailable"] = function (isAvailable) {
@@ -49,7 +54,23 @@ export default class App extends React.Component {
       }
     };
   }
+
   render() {
-    return <WrappedApplication connection={this.state.connection} />;
+    const button = (
+      <div style={{ margin: "5px auto" }}>
+        <IconButton aria-label="delete">
+          <span style={{ width: "1em" }}>
+            {<google-cast-launcher></google-cast-launcher>}
+          </span>
+        </IconButton>
+      </div>
+    );
+
+    return (
+      <WrappedApplication
+        connection={this.state.connection}
+        googleCastButton={button}
+      />
+    );
   }
 }
