@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App/chrome-cast-wrapper";
+import App from "./App/mocked-cast-wrapper";
 
 ReactDOM.render(
   <React.StrictMode>

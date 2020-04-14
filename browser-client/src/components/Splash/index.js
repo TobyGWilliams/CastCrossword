@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-import {
-  Button,
-  Stepper,
-  Step,
-  StepLabel,
-  IconButton,
-} from "@material-ui/core";
+import { Stepper, Step, StepLabel } from "@material-ui/core";
 
 import { centerText } from "../../styles";
+import PuzzleSelection from "./PuzzleSelection";
 
 const getActiveStep = (isConnection, isPuzzle) => {
   if (!isConnection) return 0;
@@ -69,6 +64,9 @@ export default ({
             })}
           </Stepper>
         </div>
+        {activeStep === 1 && (
+          <PuzzleSelection onSelectPuzzle={onSelectPuzzle} />
+        )}
       </div>
     </div>
   );

@@ -15,22 +15,17 @@ import { centerText, flexAlignCenter } from "../styles";
 const CHANNEL_CROSSWORD = "urn:x-cast:crossword";
 const CHANNEL_CLUE = "urn:x-cast:clue";
 
-const App = ({ connection, googleCastButton }) => {
+const App = ({ connectionStatus, googleCastButton, cast }) => {
   const [showSplash, setShowSplash] = useState(true);
   const [puzzle, setPuzzle] = useState();
   const [selectedClue, setSelectedClue] = useState("");
 
-  // useEffect(() => {
-  //   if (connection && puzzle) {
-  //     setShowSplash(false);
-  //   }
-  // }, [connection]);
-
-  // useEffect(() => {
-  //   if (connection && puzzle) {
-  //     setShowSplash(false);
-  //   }
-  // }, [puzzle]);
+  useEffect(() => {
+    if (showSplash && puzzle && connectionStatus === "CONNECTED") {
+      console.log("ready for puzzle");
+      setTimeout(() => setShowSplash(false), 1000);
+    }
+  });
 
   const onPuzzleLoad = () => {
     updatePuzzle(rawPuzzle);
@@ -96,7 +91,7 @@ const App = ({ connection, googleCastButton }) => {
   };
 
   const sendMessage = (channel, message) => {
-    const context = window.cast.framework.CastContext.getInstance();
+    const context = cast.framework.CastContext.getInstance();
     const session = context.getCurrentSession();
     session
       .sendMessage(channel, message)
@@ -129,7 +124,7 @@ const App = ({ connection, googleCastButton }) => {
       <Splash
         onSelectPuzzle={onPuzzleLoad}
         isPuzzle={!!puzzle}
-        isConnection={!!connection}
+        isConnection={!!connectionStatus}
         googleCastButton={googleCastButton}
       />
     );

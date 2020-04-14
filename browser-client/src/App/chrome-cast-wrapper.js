@@ -8,7 +8,7 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      connection: null,
+      connectionStatus: null,
     };
   }
 
@@ -68,7 +68,7 @@ export default class App extends React.Component {
 
     return (
       <WrappedApplication
-        connection={this.state.connection}
+        connectionStatus={this.state.connectionStatus}
         googleCastButton={button}
       />
     );
