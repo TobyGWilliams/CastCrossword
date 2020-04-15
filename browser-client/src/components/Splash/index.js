@@ -1,24 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-import {
-  Button,
-  Stepper,
-  Step,
-  StepLabel,
-  IconButton,
-} from "@material-ui/core";
+import { Stepper, Step, StepLabel } from "@material-ui/core";
 
 import { centerText } from "../../styles";
-
-const chromecastButton = (
-  <div style={{ margin: "5px auto" }}>
-    <IconButton aria-label="delete">
-      <span style={{ width: "1em" }}>
-        <google-cast-launcher></google-cast-launcher>
-      </span>
-    </IconButton>
-  </div>
-);
+import PuzzleSelection from "./PuzzleSelection";
 
 const getActiveStep = (isConnection, isPuzzle) => {
   if (!isConnection) return 0;
@@ -27,19 +12,17 @@ const getActiveStep = (isConnection, isPuzzle) => {
   return 0;
 };
 
-export default ({ onSelectPuzzle, isPuzzle, isConnection }) => {
+export default ({
+  onSelectPuzzle,
+  isPuzzle,
+  isConnection,
+  googleCastButton,
+}) => {
   const activeStep = getActiveStep(isConnection, isPuzzle);
 
   const steps = [
-    <div>Connect to your Chromecast{chromecastButton}</div>,
-    <div>
-      Select your puzzle
-      <div style={{ margin: "15px auto" }}>
-        <Button variant="outlined" onClick={onSelectPuzzle}>
-          Press me!
-        </Button>
-      </div>
-    </div>,
+    <div>Connect to your Chromecast{googleCastButton}</div>,
+    <div>Select your puzzle</div>,
     "Enjoy with friends",
   ];
 
@@ -49,14 +32,14 @@ export default ({ onSelectPuzzle, isPuzzle, isConnection }) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        height: "100vh",
+        height: activeStep === 0 ? "100vh" : "auto",
       }}
     >
       <div>
         <h1 style={{ ...centerText, fontSize: "7em", margin: 0 }}>
           CastCrossword
         </h1>
-        <h3 style={{ ...centerText, marginBottom: "50px" }}>
+        <h3 style={{ ...centerText, marginBottom: "30px" }}>
           Share your crossword on the big screen
         </h3>
         <div
@@ -81,6 +64,9 @@ export default ({ onSelectPuzzle, isPuzzle, isConnection }) => {
             })}
           </Stepper>
         </div>
+        {activeStep === 1 && (
+          <PuzzleSelection onSelectPuzzle={onSelectPuzzle} />
+        )}
       </div>
     </div>
   );
