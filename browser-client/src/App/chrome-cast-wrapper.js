@@ -1,4 +1,6 @@
 import React from "react";
+import { IconButton } from "@material-ui/core";
+
 import WrappedApplication from ".";
 
 const APPLICATION_ID = process.env.REACT_APP_CAST_APPLICATION_ID;
@@ -13,7 +15,7 @@ export default class App extends React.Component {
   }
 
   setConnection(value) {
-    this.setState({ connection: value });
+    this.setState({ connectionStatus: value });
   }
 
   componentDidMount() {
@@ -38,13 +40,16 @@ export default class App extends React.Component {
               case cast.framework.SessionState.SESSION_ENDED:
                 this.setConnection(null);
                 break;
+              case cast.framework.SessionState.SESSION_RESUMED:
+                this.setConnection("CONNECTED");
+                break;
               default:
                 break;
             }
           }
         );
       } catch (err) {
-        console.err(err);
+        console.error(err);
       }
     };
 
@@ -70,6 +75,7 @@ export default class App extends React.Component {
       <WrappedApplication
         connectionStatus={this.state.connectionStatus}
         googleCastButton={button}
+        cast={window.cast}
       />
     );
   }

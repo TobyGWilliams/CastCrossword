@@ -4,8 +4,6 @@ import ExtensionIcon from "@material-ui/icons/Extension";
 
 import { centerText, centerPercentColumn } from "../../../styles";
 
-console.log(centerText);
-
 const CenterColumn = ({ children }) => (
   <div style={centerPercentColumn(75)}>{children}</div>
 );
