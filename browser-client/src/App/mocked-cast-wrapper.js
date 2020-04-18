@@ -6,7 +6,8 @@ import CastIcon from "@material-ui/icons/CastOutlined";
 import WrappedApplication from ".";
 
 export default () => {
-  const [connectionStatus, setConnection] = useState(null);
+  // const [connectionStatus, setConnection] = useState(null);
+  const [connectionStatus, setConnection] = useState("CONNECTED");
 
   const session = {
     sendMessage: (channel) => {

@@ -13,10 +13,11 @@ const getActiveStep = (isConnection, isPuzzle) => {
 };
 
 export default ({
-  onSelectPuzzle,
-  isPuzzle,
-  isConnection,
   googleCastButton,
+  isConnection,
+  isPuzzle,
+  onSelectPuzzle,
+  puzzles,
 }) => {
   const activeStep = getActiveStep(isConnection, isPuzzle);
 
@@ -65,7 +66,7 @@ export default ({
           </Stepper>
         </div>
         {activeStep === 1 && (
-          <PuzzleSelection onSelectPuzzle={onSelectPuzzle} />
+          <PuzzleSelection onSelectPuzzle={onSelectPuzzle} puzzles={puzzles} />
         )}
       </div>
     </div>
