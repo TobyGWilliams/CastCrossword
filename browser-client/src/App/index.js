@@ -8,12 +8,16 @@ import Splash from "../components/Splash";
 
 import htmlDecode from "../util/html-decode";
 import convertToGrid from "../util/convert-to-grid";
-import rawPuzzle from "../puzzles/ny-times-2019-12-28.json";
+
+import rawPuzzle1 from "../puzzles/toby.json";
+import rawPuzzle2 from "../puzzles/ny-times-2019-12-28.json";
 
 import { centerText, flexAlignCenter } from "../styles";
 
 const CHANNEL_CROSSWORD = "urn:x-cast:crossword";
 const CHANNEL_CLUE = "urn:x-cast:clue";
+
+const puzzles = [rawPuzzle1, rawPuzzle2];
 
 const App = ({ connectionStatus, googleCastButton, cast }) => {
   const [showSplash, setShowSplash] = useState(true);
@@ -27,8 +31,8 @@ const App = ({ connectionStatus, googleCastButton, cast }) => {
     }
   });
 
-  const onPuzzleLoad = () => {
-    updatePuzzle(rawPuzzle);
+  const onPuzzleLoad = (puzzle) => {
+    updatePuzzle(puzzle);
   };
 
   const onClueClick = (clue) => () => {
@@ -123,6 +127,7 @@ const App = ({ connectionStatus, googleCastButton, cast }) => {
     return (
       <Splash
         onSelectPuzzle={onPuzzleLoad}
+        puzzles={puzzles}
         isPuzzle={!!puzzle}
         isConnection={!!connectionStatus}
         googleCastButton={googleCastButton}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "author": "Somebody",
+    "date": "17/04/2020",
+    "dow": "Friday",
+    "title": "From an App"
+  },
+  "clues": [
+    {
+      "answer": "xxx",
+      "description": "1. Grass roll",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 1,
+      "location": { "x": 1, "y": 0 }
+    },
+    {
+      "answer": "xxxxx",
+      "description": "1. Biblicial mother who had a child at age 90",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 1,
+      "location": { "x": 1, "y": 0 }
+    },
+    {
+      "answer": "xxxxx",
+      "description": "2. Hour after noon",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 2,
+      "location": { "x": 2, "y": 0 }
+    },
+    {
+      "answer": "xxxxx",
+      "description": "3. Jeans fabric",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 3,
+      "location": { "x": 3, "y": 0 }
+    },
+    {
+      "answer": "xxxxx",
+      "description": "4. Yellon who served as the chair of federal reserve",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 4,
+      "location": { "x": 0, "y": 1 }
+    },
+    {
+      "answer": "xxx",
+      "description": "4. Container of peanut butter or jelly",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 4,
+      "location": { "x": 0, "y": 1 }
+    },
+    {
+      "answer": "xxx",
+      "description": "5. Just a ___ (somewhat)",
+      "direction": "DOWN",
+      "guess": "",
+      "number": 5,
+      "location": { "x": 4, "y": 1 }
+    },
+    {
+      "answer": "xxxxx",
+      "description": "7. Speedy",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 7,
+      "location": { "x": 0, "y": 3 }
+    },
+    {
+      "answer": "xxx",
+      "description": "8. Utternance whilst stroking one's chin",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 8,
+      "location": { "x": 1, "y": 4 }
+    },
+    {
+      "answer": "xxxxx",
+      "description": "6. Team building?",
+      "direction": "ACROSS",
+      "guess": "",
+      "number": 6,
+      "location": { "x": 0, "y": 2 }
+    }
+  ],
+
+  "size": {
+    "rows": 5,
+    "columns": 5
+  }
+}
